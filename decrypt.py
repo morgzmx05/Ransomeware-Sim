@@ -40,7 +40,9 @@ def decrypt_file(file_path, key):
 # Decrypt all files in test_files
 for filename in os.listdir(TEST_FOLDER):
     file_path = os.path.join(TEST_FOLDER, filename)
-    decrypt_file(file_path, key)
+    # ensures the readme isnt decrypted asw
+    if file_path.endswith(".json"):
+        decrypt_file(file_path, key)
 
 print("All files successfully decrypted!")
 

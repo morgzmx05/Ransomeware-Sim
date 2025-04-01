@@ -3,7 +3,7 @@ import time
 
 # Define ransom note content
 RANSOM_NOTE = """
-💀 YOUR FILES HAVE BEEN ENCRYPTED 💀
+ YOUR FILES HAVE BEEN ENCRYPTED 
 
 ALL your important files have been locked using **military-grade encryption**. 
 
